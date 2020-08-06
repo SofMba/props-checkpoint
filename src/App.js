@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import List from ".././src/Profile/Profilecomp";
 import './App.css';
 
+
 function App() {
+  const listPerons = [
+    {
+      fullname : "sofiene mbarek",
+      bio : "age 19",
+      profession : "pilot",
+    },
+    {
+      fullname : "ahmed tritar",
+      bio : "age 16 years old",
+      profession :"taxi driver",
+    },
+    {
+      fullname :" mohamed foued salama",
+      bio :"age 25 years old ",
+      profession :"software",
+    },
+    {
+      fullname : "sofiene mbarek",
+      bio : "age 19",
+      profession : "pilot",
+    },
+    {
+      fullname : "ahmed tritar",
+      bio : "age 16 years old",
+      profession :"taxi driver",
+    },
+    {
+      fullname :" mohamed foued salama",
+      bio :"age 25 years old ",
+      profession :"software",
+    },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {listPerons.map(el => <List person={el} />)}
     </div>
   );
 }
